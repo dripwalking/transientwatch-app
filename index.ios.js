@@ -15,10 +15,12 @@ var {
   Image,
   ListView,
   ScrollView,
+  AsyncStorage,
 } = React;
 
 
 var REQUEST_URL = 'http://transientwatch.mybluemix.net/feed';
+
 
 
 

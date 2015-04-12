@@ -15,9 +15,10 @@ var {
   Image,
   ListView,
   ScrollView,
-  AsyncStorage,
+  SwitchIOS,
 } = React;
 
+//var RefreshableListView = require('react-native-refreshable-listview');
 
 var REQUEST_URL = 'http://transientwatch.mybluemix.net/feed';
 
@@ -32,6 +33,10 @@ var transientwatch = React.createClass({
         rowHasChanged: (row1, row2) => row1 !== row2,
       }),
       loaded: false,
+      eventSwitchIsOn: false,
+      eventSwitchRegressionIsOn: true,
+      colorTrueSwitchIsOn: true,
+      colorFalseSwitchIsOn: false,
     };
   },
 
@@ -57,11 +62,19 @@ var transientwatch = React.createClass({
     }
 
     return (
+      <ScrollView horizontal={false} pagingEnabled={true}>
+      <View style={styles.head}>
+        <Text style={styles.titleHead}>Latest News</Text>
+      </View>
+      <View style={styles.filter}>
+
+      </View>
       <ListView
         dataSource={this.state.dataSource}
         renderRow={this.renderNews}
         style={styles.listView}
       />
+      </ScrollView>
     );
   },
 
@@ -84,7 +97,7 @@ var transientwatch = React.createClass({
       
     } 
     return (
-      <ScrollView horizontal={false} pagingEnabled={true}>
+      
       <View style={styles.container}>
         <View style={styles.circle} />
         <View style={styles.rightContainer}>
@@ -93,7 +106,7 @@ var transientwatch = React.createClass({
           <Text style={styles.subtext}>{item.Source}</Text>
         </View>
       </View>
-      </ScrollView>
+      
     );
   },
 
@@ -107,6 +120,26 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
     padding: 5,
+  },
+  head: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9C939A',
+    padding: 5,
+    marginTop: 20,
+    paddingTop: 8,
+    color: '#FFFFFF'
+  },
+  filter: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    padding: 5,
+    color: '#FFFFFF'
   },
   circle: {
     borderRadius: 3, 
@@ -131,6 +164,13 @@ var styles = StyleSheet.create({
     textAlign: 'left',
     color: '#463C37',
   },
+  titleHead: {
+    fontSize: 16,
+    marginBottom: 8,
+    textAlign: 'left',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+  },
   text: {
     fontSize: 11,
     color: '#9C939A',
@@ -143,7 +183,6 @@ var styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   listView: {
-    paddingTop: 20,
     backgroundColor: '#F5FCFF',
   },
 });

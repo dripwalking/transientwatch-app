@@ -15,7 +15,7 @@ var {
   Image,
   ListView,
   ScrollView,
-  AsyncStorage,
+  PushNotificationIOS,
 } = React;
 
 
@@ -50,6 +50,7 @@ var transientwatch = React.createClass({
       })
       .done();
   },
+
 
   render: function() {
     if (!this.state.loaded) {
@@ -98,6 +99,28 @@ var transientwatch = React.createClass({
   },
 
 });
+
+// class NotificationTransient extends React.Component {
+//   componentWillMount() {
+//     PushNotificationIOS.addEventListener('notification', this._onNotification);
+//   }
+
+//   componentWillUnmount() {
+//     PushNotificationIOS.removeEventListener('notification', this._onNotification);
+//   }
+
+
+//   _onNotification(notification) {
+//     AlertIOS.alert(
+//       'Notification Received',
+//       'Alert message: ' + notification.getMessage(),
+//       [{
+//         text: 'Dismiss',
+//         onPress: null,
+//       }]
+//     );
+//   }
+// }
 
 var styles = StyleSheet.create({
   container: {

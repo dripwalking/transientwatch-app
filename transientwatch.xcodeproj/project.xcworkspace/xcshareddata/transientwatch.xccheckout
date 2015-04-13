@@ -5,23 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8973F5AD-8A80-44B4-8365-7BA06EBAFDA2</string>
+	<string>EDC2448D-CD87-4AC5-8BCC-3BB85EEED580</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>transientwatch</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C4D856E5D8A263B8E0BE84862FAE933575147609</key>
-		<string>github.com:dripwalking/transientwatch-app.git</string>
+		<string>https://github.com/dripwalking/transientwatch-app.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>transientwatch.xcodeproj/project.xcworkspace</string>
+	<string>transientwatch.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C4D856E5D8A263B8E0BE84862FAE933575147609</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:dripwalking/transientwatch-app.git</string>
+	<string>https://github.com/dripwalking/transientwatch-app.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

@@ -21,6 +21,7 @@ module.exports = StyleSheet.create({
     marginLeft:10,
     marginRight:10,
     marginBottom:5,
+    marginTop: 70,
   },
   foot: {
     flex:2
@@ -28,20 +29,22 @@ module.exports = StyleSheet.create({
   title:{
     fontSize: 20,
     textAlign: 'left',
-    marginTop: 10,
+    marginTop: 5,
     marginBottom: 10,
     color: '#FF6600',
   },
   text:{
     textAlign: 'left',
-    marginTop: 20,
+    marginTop: 10,
     fontSize: 14,
     marginBottom: 3,
+    padding: 10,
   },
   source:{
     fontSize: 15,
     textAlign: 'left',
     color: '#0089FF',
+    padding: 10,
   },
   separator: {
     height: 0.5,

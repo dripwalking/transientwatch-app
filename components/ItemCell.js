@@ -5,7 +5,8 @@ var React = require('react-native');
 var {
   Text,
   View,
-  TouchableHighlight
+  TouchableHighlight,
+  AsyncStorage
 } = React;
 
 var styles = require("./style");
@@ -34,6 +35,9 @@ var ItemCell = React.createClass({
       </View>
       </TouchableHighlight>
     );
+  },
+  readUnread: function() {
+    return('styles.itemTitle')
   }
 });
 

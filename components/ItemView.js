@@ -24,6 +24,7 @@ render: function() {
           </Text>
           </View>
           
+          
           <Text style={styles.text}>
             {this.props.item_text}
           </Text>
@@ -32,7 +33,7 @@ render: function() {
             onPress={() => this.openPage()}
             underlayColor='#F6F6EF'>
 	          <Text style={styles.source}>
-	            URL: {this.props.item_by}
+	            Open original article: {this.props.item_by}
 	          </Text>
           </TouchableHighlight>
           
